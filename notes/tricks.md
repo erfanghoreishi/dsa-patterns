@@ -1,0 +1,176 @@
+# Clever One-Liners & Non-Obvious Patterns
+
+Patterns worth remembering, spotted in the `patterns/` solutions.
+
+---
+
+## Chained `.replace()` instead of parsing
+
+`str.replace` returns a new string, so calls chain left-to-right. You can decode a
+small grammar without any loop or state machine.
+
+```python
+# interpret_1678.py  (LC 1678 – Goal Parser Interpretation)
+return command.replace("()", "o").replace("(al)", "al")
+```
+
+Order matters: replace the most specific / shortest tokens carefully so earlier
+replacements don't corrupt later matches.
+
+From: [interpret_1678.py](../patterns/string/interpret_1678.py)
+
+---
+
+## Slice-and-reverse prefix in one line
+
+Slicing makes "reverse the first k characters" a one-liner — no two-pointer swap
+loop needed. `s[:k][::-1]` reverses the prefix, then concatenate the untouched
+tail.
+
+```python
+# reverse_prefix_3794.py
+return s[0:k][::-1] + s[k:]
+```
+
+Trade-off: clean and readable, but allocates new strings (O(n) extra space) vs.
+the in-place two-pointer version kept as a comment in the same file.
+
+From: [reverse_prefix_3794.py](../patterns/two-pointers/reverse_prefix_3794.py)
+
+---
+
+## Kadane's algorithm with chained initialization
+
+`best = dp = nums[0]` seeds both the running subarray sum (`dp`) and the global
+best in one statement. Each step, `dp` either extends the previous subarray or
+restarts at the current element.
+
+```python
+# maximum_subarray_0053.py  (LC 53 – Maximum Subarray)
+best = dp = nums[0]
+for i in range(1, len(nums)):
+    dp = max(nums[i], dp + nums[i])
+    best = max(dp, best)
+return best
+```
+
+From: [maximum_subarray_0053.py](../patterns/dynamic-programming/maximum_subarray_0053.py)
+
+---
+
+## In-place list as a stack with a write pointer
+
+Instead of allocating a separate stack, overwrite the input list in place using a
+write index `p`. Pushing writes `s[p]` and increments; popping just decrements
+`p`. The answer is the prefix `s[:p]`.
+
+```python
+# clear_digits_3174.py  (LC 3174 – Clear Digits)
+s = list(s)
+p = 0
+for char in s:
+    if char.isdigit():
+        p -= 1          # "pop"
+    else:
+        s[p] = char     # "push"
+        p += 1
+return ''.join(s[0:p])
+```
+
+O(1) extra space beyond the list copy — the same array doubles as input and stack.
+
+From: [clear_digits_3174.py](../patterns/stack/clear_digits_3174.py)
+
+---
+
+## "Add the center" trick for longest palindrome
+
+When building a palindrome from character counts, take all even pairs, and if *any*
+character had a leftover odd count, you can still place one of them in the center —
+so add exactly 1.
+
+```python
+# longest_palindrome_0409.py  (LC 409 – Longest Palindrome)
+return count + (1 if has_odd else 0)
+```
+
+The `has_odd` flag captures "was there at least one odd-count char" — you add 1 at
+most once, no matter how many odd counts existed.
+
+From: [longest_palindrome_0409.py](../patterns/hashmap/longest_palindrome_0409.py)
+
+---
+
+## Flattening a 2D grid with a nested inline `for` in a comprehension
+
+A list comprehension can chain multiple `for` clauses, read left-to-right like
+nested loops. This flattens a 2D grid and counts non-zero cells in a single
+expression — no explicit nested loop needed.
+
+```python
+# projection_area_0883.py  (LC 883 – Projection Area of 3D Shapes)
+shadow_xy = sum([1 for row in grid for col in row if col != 0])
+```
+
+`for row in grid` is the outer loop, `for col in row` the inner; the trailing
+`if col != 0` filters. Each surviving cell contributes `1` to the `sum`. Pairs
+nicely with `zip(*grid)` (column max) and `max(row)` (row max) to get all three
+projections.
+
+From: [projection_area_0883.py](../patterns/matrix/projection_area_0883.py)
+
+---
+
+## Booleans as integers (inline `if` without writing one)
+
+In Python `bool` is a subclass of `int`, so `True == 1` and `False == 0`. Adding a
+comparison directly is shorthand for the inline conditional `1 if cond else 0` —
+handy for incrementally maintaining a count in a sliding window.
+
+```python
+# minimum_recolors_2379.py  (LC 2379 – Minimum Recolors)
+whites += (blocks[i] == 'W')       # same as: whites += 1 if blocks[i] == 'W' else 0
+whites -= (blocks[i - k] == 'W')   # drop the element leaving the window
+```
+
+The explicit ternary `1 if blocks[i] == 'W' else 0` is the equivalent inline `if`
+form, kept as a comment in the file for clarity.
+
+From: [minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py)
+
+---
+
+## `.count()` to seed a window
+
+`str.count(sub)` (and `list.count(x)`) returns how many times a value occurs.
+Slicing first, then counting, gives the tally for the initial sliding window in
+one expression — no manual loop to prime it.
+
+```python
+# minimum_recolors_2379.py  (LC 2379 – Minimum Recolors)
+whites = blocks[:k].count('W')     # whites in the first window of size k
+```
+
+After this you only adjust by +/- 1 as the window slides, instead of recounting.
+
+From: [minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py)
+
+---
+
+## Frequency counting with `dict.get(key, default)`
+
+`dict.get(key, 0)` returns the current count or `0` when the key is missing, so you
+can increment in one line without a `if key in d` guard or a `try/except`. The
+plain-dict equivalent of `collections.Counter` / `defaultdict(int)`.
+
+```python
+# longest_palindrome_0409.py  (LC 409 – Longest Palindrome)
+freq = {}
+for char in s:
+    freq[char] = freq.get(char, 0) + 1
+```
+
+The second argument is only used as a fallback — it isn't stored unless you assign
+it back, as done here.
+
+From: [longest_palindrome_0409.py](../patterns/hashmap/longest_palindrome_0409.py)
