@@ -2,9 +2,9 @@
 
 Reference for built-ins and string methods commonly used in DSA solutions.
 
-> **Note:** As of this writing, none of the entries below are actually used in any
-> solution file under `patterns/`, so every entry is a placeholder. Fill in the
-> `Used in:` line (and replace the TODO example) as you start using each one.
+> **Note:** Entries still marked with a `# TODO` example aren't used in any
+> solution under `patterns/` yet. Fill in the `Used in:` line (and replace the
+> TODO example) as you start using each one.
 
 ---
 
@@ -44,10 +44,10 @@ Returns a new sorted list from any iterable (the original is untouched). Support
 a `key` function and `reverse=True`.
 
 ```python
-# TODO: write an example using sorted
+sorted([4, 5, 2, 1])  # [1, 2, 4, 5]
 ```
 
-Used in: _(not yet used)_
+Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
 
 ---
 
@@ -106,14 +106,29 @@ Used in: _(not yet used)_
 
 ## `bisect`
 
-Module for binary search on a sorted list. `bisect_left`/`bisect_right` find an
-insertion index in O(log n); `insort` inserts while keeping order.
+Binary search on a sorted list. `bisect_right(list, x)` returns the index where
+`x` would be inserted to keep the list sorted — which tells you how many elements
+are ≤ x. (`bisect_left` gives the count of elements strictly < x.)
 
 ```python
-# TODO: write an example using bisect
+from bisect import bisect_right
+bisect_right([1, 3, 5, 7], 5)  # 3 — index after the 5
 ```
 
-Used in: _(not yet used)_
+Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
+
+---
+
+## `itertools.accumulate`
+
+Builds a running cumulative sum (or other operation) from a list.
+
+```python
+from itertools import accumulate
+list(accumulate([1, 2, 3, 4]))  # [1, 3, 6, 10]
+```
+
+Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
 
 ---
 
@@ -136,10 +151,11 @@ Used in: _(not yet used)_
 a letter. Handy for filtering/validating alphabetic input.
 
 ```python
-# TODO: write an example using isalpha
+"abc".isalpha()  # True
+"ab3".isalpha()  # False
 ```
 
-Used in: _(not yet used)_
+Used in: _(not yet used — the related `str.isdigit()` is used in [clear_digits_3174.py](../patterns/stack/clear_digits_3174.py))_
 
 ---
 
@@ -154,3 +170,17 @@ punctuation.
 ```
 
 Used in: _(not yet used)_
+
+---
+
+## `join`
+
+`sep.join(iterable)` concatenates an iterable of strings into one, with `sep`
+between items. `''.join(chars)` is the standard way to turn a list of characters
+back into a string.
+
+```python
+''.join(['a', 'b', 'c'])  # 'abc'
+```
+
+Used in: [clear_digits_3174.py](../patterns/stack/clear_digits_3174.py)

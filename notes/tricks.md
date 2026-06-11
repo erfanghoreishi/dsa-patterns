@@ -196,3 +196,25 @@ coefficients wrap correctly with no extra handling. Each step builds on the
 previous (`dp0 -> dp1 -> dp2 -> ...`), so it doubles as a gentle DP warm-up.
 
 From: [polynomial_value_quera.py](../patterns/dynamic-programming/polynomial_value_quera.py)
+
+---
+
+## Prefix sums + `bisect_right` to answer "largest count with sum ≤ q"
+
+To find the longest subsequence whose sum stays within a budget, **sort ascending**
+(greedily take the smallest elements), build prefix sums, then binary-search each
+query. `bisect_right(prefix, q)` is exactly "how many prefix sums are ≤ q" — i.e.
+how many of the smallest elements you can afford.
+
+```python
+# longest_subsequence_limited_sum_2389.py  (LC 2389)
+nums = sorted(nums)
+prefix = list(accumulate(nums))
+return [bisect_right(prefix, q) for q in queries]
+```
+
+Sort + prefix is built once (O(n log n)); each query is then O(log n) instead of
+re-scanning. The file keeps a no-built-ins version (manual prefix loop + manual
+binary search) in comments.
+
+From: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)

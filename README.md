@@ -27,6 +27,7 @@ importable Python module.
 | 0883 | Projection Area of 3D Shapes     | matrix             |
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
+| 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.
