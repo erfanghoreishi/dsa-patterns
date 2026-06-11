@@ -174,3 +174,25 @@ The second argument is only used as a fallback — it isn't stored unless you as
 it back, as done here.
 
 From: [longest_palindrome_0409.py](../patterns/hashmap/longest_palindrome_0409.py)
+
+---
+
+## Horner's method for polynomial evaluation (with running modulo)
+
+Evaluate `P(x) = a_n x^n + ... + a_0` in O(n) with no powers and no overflow, by
+factoring it as `((...(a_n·x + a_{n-1})·x + a_{n-2})·x + ...) + a_0`. Take `% MOD`
+every step so intermediate values stay bounded.
+
+```python
+# polynomial_value_quera.py  (Quera – Polynomial Evaluation)
+result = 0
+for a in coeffs:               # coeffs from a_n down to a_0
+    result = (result * x + a) % MOD
+```
+
+Because `(a*b + c) mod M == ((a mod M)*(b mod M) + c) mod M`, reducing as you go is
+exact. Python's `%` returns a non-negative remainder, so negative `x` or
+coefficients wrap correctly with no extra handling. Each step builds on the
+previous (`dp0 -> dp1 -> dp2 -> ...`), so it doubles as a gentle DP warm-up.
+
+From: [polynomial_value_quera.py](../patterns/dynamic-programming/polynomial_value_quera.py)

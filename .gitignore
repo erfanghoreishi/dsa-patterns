@@ -14,3 +14,8 @@ env/
 # Editor
 .idea/
 .vscode/
+
+# AI tooling — CLAUDE.md just imports AGENTS.md (the shared, committed file)
+CLAUDE.md
+CLAUDE.local.md
+.claude/settings.local.json
