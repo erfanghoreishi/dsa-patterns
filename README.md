@@ -28,6 +28,8 @@ importable Python module.
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
+| 2596 | Check Knight Tour Configuration  | matrix             |
+| 3823 | Reverse Letters Then Special Characters | two-pointers |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.

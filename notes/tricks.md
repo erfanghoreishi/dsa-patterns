@@ -218,3 +218,20 @@ re-scanning. The file keeps a no-built-ins version (manual prefix loop + manual
 binary search) in comments.
 
 From: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
+
+---
+
+## Tuple unpacking to name coordinates
+
+A `(row, col)` tuple can be split straight into two variables in one line, so you
+work with readable names instead of `pos[step][0]` / `pos[step][1]`.
+
+```python
+# check_valid_grid_2596.py  (LC 2596 – Check Knight Tour Configuration)
+r1, c1 = pos[step]
+r2, c2 = pos[step + 1]
+if (r2 - r1, c2 - c1) not in moves:   # the move itself is also a tuple
+    ...
+```
+
+From: [check_valid_grid_2596.py](../patterns/matrix/check_valid_grid_2596.py)
