@@ -235,3 +235,25 @@ if (r2 - r1, c2 - c1) not in moves:   # the move itself is also a tuple
 ```
 
 From: [check_valid_grid_2596.py](../patterns/matrix/check_valid_grid_2596.py)
+
+---
+
+## Counting with `sum()` over a boolean generator
+
+`True == 1` and `False == 0`, so `sum(condition for x in items)` counts how many
+items satisfy `condition` — no explicit counter or `if` needed. Pairs well with a
+slice to count only within a range.
+
+```python
+# vowel_strings_2586.py  (LC 2586 – Count the Number of Vowel Strings in Range)
+vowels = set('aeiou')
+return sum(
+    word[0] in vowels and word[-1] in vowels
+    for word in words[left:right + 1]
+)
+```
+
+Using a generator (no `[]`) avoids building an intermediate list. Same boolean-as-int
+idea as the sliding-window count, just summed in one shot instead of incrementally.
+
+From: [vowel_strings_2586.py](../patterns/string/vowel_strings_2586.py)

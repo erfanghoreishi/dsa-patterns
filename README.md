@@ -19,7 +19,9 @@ importable Python module.
 | #    | Problem                          | Pattern            |
 |------|----------------------------------|--------------------|
 | 0053 | Maximum Subarray                 | dynamic-programming |
+| 0070 | Climbing Stairs                  | dynamic-programming |
 | 0409 | Longest Palindrome               | hashmap            |
+| 1436 | Destination City                 | hashmap            |
 | 3174 | Clear Digits                     | stack              |
 | 1678 | Goal Parser Interpretation       | string             |
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |
@@ -28,6 +30,7 @@ importable Python module.
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
+| 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
