@@ -21,7 +21,8 @@ for col in zip(*grid):
     print(col)        # (1, 3) then (2, 4)
 ```
 
-Used in: [projection_area_0883.py](../patterns/matrix/projection_area_0883.py)
+Used in: [projection_area_0883.py](../patterns/matrix/projection_area_0883.py),
+[check_valid_2133.py](../patterns/matrix/check_valid_2133.py)
 
 ---
 

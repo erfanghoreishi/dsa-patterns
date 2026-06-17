@@ -29,6 +29,7 @@ importable Python module.
 | 0883 | Projection Area of 3D Shapes     | matrix             |
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
+| 2133 | Check if Every Row and Column Contains All Numbers | matrix |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
