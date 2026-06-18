@@ -257,3 +257,23 @@ Using a generator (no `[]`) avoids building an intermediate list. Same boolean-a
 idea as the sliding-window count, just summed in one shot instead of incrementally.
 
 From: [vowel_strings_2586.py](../patterns/string/vowel_strings_2586.py)
+
+---
+
+## Comprehension: filter `if` vs ternary `if/else`
+
+Position changes the meaning — don't confuse them.
+
+- **Filter `if` (at the END)** — keeps fewer items, no `else`:
+  `[x for x in items if cond]` → skips items where `cond` is False.
+- **Ternary `if/else` (at the FRONT)** — keeps all items, `else` required:
+  `[x if cond else y for x in items]` → transforms each, never drops.
+
+Memory hook: **`if` at the end = filtering**, **`if/else` at the front = transforming**.
+
+```python
+# are_almost_equal_1790.py  (LC 1790) — filter to collect only mismatched pairs
+diffs = [(a, b) for a, b in zip(s1, s2) if a != b]
+```
+
+From: [are_almost_equal_1790.py](../patterns/string/are_almost_equal_1790.py)

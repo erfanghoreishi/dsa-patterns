@@ -36,11 +36,42 @@ Personal LeetCode/competitive-programming practice, organized by algorithmic pat
      when it uses one already present as a TODO placeholder, fill in the real
      example and set its `Used in:` link.
    - `notes/redo.md` — if it's a problem to revisit (status ❌ Stuck / ⚠️ Redo).
+   - **Also ask the user for a `THOUGHTS:` note** at this point — if they have any
+     reflection on the problem, add it as a `THOUGHTS:` comment in the solution
+     file (see below). Don't invent the content — use the user's own words.
+     If a thought was already given (in the pasted code's comments or in the
+     prompt), capture that instead of asking again, refining it only as needed to
+     match the convention and read clearly — keep the user's meaning intact.
 
 7. **If files were moved or renamed**, update everything that points at them:
    - the import line in the matching `test_*.py`
    - links/paths in `README.md` and under `notes/`
    Then re-run the affected tests to confirm nothing broke.
+
+## Personal reflections: the `THOUGHTS:` tag
+
+Per-problem reflections live as a comment **in the solution file**, marked with a
+consistent, greppable tag so they can be collected on demand:
+
+```bash
+grep -rn "THOUGHTS:" patterns/
+```
+
+- **Spelling is fixed:** always `THOUGHTS:` (exact string) — a typo'd tag is silently
+  missed by the grep.
+- **Where to put it:** right under the `#<id>. <title>` header line, above the
+  function. One block per problem.
+- **What to write:** the *non-obvious* part for you — e.g. "the code was easy, the
+  hard part was understanding the question", the key insight, what tripped you up,
+  or what you'd do faster next time. Skip it if there's nothing worth saying.
+
+```python
+#1790. Check if One String Swap Can Make Strings Equal
+# THOUGHTS: code was easy; the hard part was parsing the question — the two
+#           mismatches must *mirror* each other, not just be equal in count.
+def areAlmostEqual(s1, s2):
+    ...
+```
 
 ## Notes on style
 
