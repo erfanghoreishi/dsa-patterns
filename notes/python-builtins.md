@@ -185,3 +185,18 @@ back into a string.
 ```
 
 Used in: [clear_digits_3174.py](../patterns/stack/clear_digits_3174.py)
+
+---
+
+## `count`
+
+`list.count(x)` (and `str.count(sub)`) returns how many times a value occurs.
+Handy for "how many equal the max/target" without an explicit loop.
+
+```python
+[5, 3, 5, 5].count(5)  # 3
+"banana".count("a")    # 3
+```
+
+Used in: [count_good_rectangles_1725.py](../patterns/array/count_good_rectangles_1725.py)
+(list), [minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py) (str)

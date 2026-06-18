@@ -29,6 +29,8 @@ importable Python module.
 | 0883 | Projection Area of 3D Shapes     | matrix             |
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
+| 1725 | Number Of Rectangles That Can Form The Largest Square | array |
+| 1790 | Check if One String Swap Can Make Strings Equal | string |
 | 2133 | Check if Every Row and Column Contains All Numbers | matrix |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
