@@ -54,14 +54,23 @@ Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/lon
 
 ## `heapq`
 
-Module implementing a binary min-heap on a plain list. `heappush`/`heappop` keep
-the smallest element at index 0 — the go-to for priority queues and "top-k".
+Binary **min**-heap on a plain list (smallest stays at index 0). Key functions:
+- `heapify(lst)` — turn a list into a heap in place, O(n)
+- `heappush(heap, x)` — add an item, O(log n)
+- `heappop(heap)` — remove & return the smallest, O(log n)
+- `heap[0]` — peek the smallest, O(1)
+
+For a **max**-heap, push negated values (`-x`) and negate again on the way out.
 
 ```python
-# TODO: write an example using heapq
+import heapq
+h = [3, 1, 2]
+heapq.heapify(h)        # [1, 3, 2]
+heapq.heappush(h, 0)
+heapq.heappop(h)        # 0  (the smallest)
 ```
 
-Used in: _(not yet used)_
+Used in: [maximum_score_1753.py](../patterns/heap/maximum_score_1753.py)
 
 ---
 
