@@ -35,6 +35,7 @@ importable Python module.
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
+| 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
