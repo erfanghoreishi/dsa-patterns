@@ -190,7 +190,8 @@ between items. `''.join(chars)` is the standard way to turn a list of characters
 back into a string.
 
 ```python
-''.join(['a', 'b', 'c'])  # 'abc'
+'-'.join(['a', 'b', 'c'])  # 'a-b-c'  — separator goes *between* items
+''.join(['a', 'b', 'c'])   # 'abc'    — empty separator just concatenates
 ```
 
 Used in: [clear_digits_3174.py](../patterns/stack/clear_digits_3174.py)
@@ -208,4 +209,5 @@ Handy for "how many equal the max/target" without an explicit loop.
 ```
 
 Used in: [count_good_rectangles_1725.py](../patterns/array/count_good_rectangles_1725.py)
-(list), [minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py) (str)
+(list), [maximum_bags_2279.py](../patterns/greedy/maximum_bags_2279.py) (list),
+[minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py) (str)
