@@ -20,6 +20,7 @@ importable Python module.
 |------|----------------------------------|--------------------|
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
+| 0290 | Word Pattern                     | hashmap            |
 | 0409 | Longest Palindrome               | hashmap            |
 | 1436 | Destination City                 | hashmap            |
 | 3174 | Clear Digits                     | stack              |
@@ -48,6 +49,7 @@ Non-LeetCode problems use their source as a tag instead of a number (e.g.
 - [notes/python-builtins.md](notes/python-builtins.md) — built-ins & string-method cheat sheet
 - [notes/tricks.md](notes/tricks.md) — clever one-liners and non-obvious patterns
 - [notes/redo.md](notes/redo.md) — tracker for problems to revisit
+- [notes/theory/](notes/theory/) — reusable theory: [algorithmic concepts](notes/theory/algorithmic_concepts.md) (bijection, inversions, …) and the [Master Theorem](notes/theory/recursive_functions_big_o_master_theorem.md)
 
 ## Running tests
 

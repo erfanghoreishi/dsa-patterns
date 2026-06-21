@@ -36,6 +36,14 @@ Personal LeetCode/competitive-programming practice, organized by algorithmic pat
      when it uses one already present as a TODO placeholder, fill in the real
      example and set its `Used in:` link.
    - `notes/redo.md` — if it's a problem to revisit (status ❌ Stuck / ⚠️ Redo).
+   - `notes/theory/` — for reusable theory, not per-problem tricks: e.g.
+     `algorithmic_concepts.md` (general algorithm/math ideas like bijection,
+     counting inversions) and `recursive_functions_big_o_master_theorem.md`. When a
+     problem hinges on such a concept, add/extend the concept here and reference the
+     solution file from it.
+     - In `algorithmic_concepts.md`, each concept is a **numbered** `##` heading
+       (`## 1. …`, `## 2. …`); when adding one, give it the next number — the goal
+       is a growing list of the ~50 most useful concepts.
    - **Also ask the user for a `THOUGHTS:` note** at this point — if they have any
      reflection on the problem, add it as a `THOUGHTS:` comment in the solution
      file (see below). Don't invent the content — use the user's own words.
