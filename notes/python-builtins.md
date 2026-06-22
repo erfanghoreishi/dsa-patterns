@@ -211,3 +211,33 @@ Handy for "how many equal the max/target" without an explicit loop.
 Used in: [count_good_rectangles_1725.py](../patterns/array/count_good_rectangles_1725.py)
 (list), [maximum_bags_2279.py](../patterns/greedy/maximum_bags_2279.py) (list),
 [minimum_recolors_2379.py](../patterns/sliding-window/minimum_recolors_2379.py) (str)
+
+---
+
+## `set`
+
+Unordered collection of unique, hashable items — O(1) membership (`x in s`) and
+fast algebra. Building a `set` also dedupes (`len(set(xs))` = distinct count).
+
+```python
+s = set()
+
+# modify
+s.add(x)
+s.discard(x)       # remove if present, no error if missing
+s.clear()
+
+# set algebra (a, b are sets)
+a & b              # intersection (common elements)
+a | b              # union
+a - b              # difference (in a, not b)
+a ^ b              # symmetric difference (in exactly one)
+
+# relations
+a.isdisjoint(b)    # True if no common elements
+a <= b             # subset
+a >= b             # superset
+```
+
+Used in: [can_be_typed_words_1935.py](../patterns/hashmap/can_be_typed_words_1935.py)
+(`set(word) & broken` to test for a broken letter; `isdisjoint` is the cleaner form)

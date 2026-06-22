@@ -40,3 +40,28 @@ better than removing them one at a time.
 
 Count inversions in `O(n log n)` with a modified **merge sort** (count cross-pairs
 while merging) or a **Fenwick/BIT**. (Brute force is `O(n^2)`.)
+
+---
+
+## 3. Furthest-reach greedy (interval merging / last-occurrence)
+
+Scan left to right tracking the **furthest point** anything seen so far reaches;
+close the current group when your position catches that reach. You can't close
+earlier without splitting connected elements.
+
+```python
+start = end = 0
+for i, c in enumerate(s):
+    end = max(end, reach(i))          # how far element i extends
+    if i == end:                      # group closed
+        result.append(i - start + 1)  # finalize (here: its size)
+        start = i + 1
+```
+
+`reach(i)` changes per problem: last occurrence of `s[i]` (Partition Labels), an
+interval's `end` (Merge Intervals 56, Burst Balloons 452), or the furthest index
+jumpable (Jump Game II 45, Video Stitching 1024). **Trigger to recognize it:**
+"last occurrence / furthest reach / max extent" + "partition / group / merge".
+
+**Referenced in:** [partition_labels_0763.py](../../patterns/greedy/partition_labels_0763.py)
+— `reach(i) = last[s[i]]`; closes a partition when `i` reaches the furthest last-occurrence.

@@ -21,6 +21,7 @@ importable Python module.
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0290 | Word Pattern                     | hashmap            |
+| 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
 | 1436 | Destination City                 | hashmap            |
 | 3174 | Clear Digits                     | stack              |
@@ -34,6 +35,7 @@ importable Python module.
 | 1790 | Check if One String Swap Can Make Strings Equal | string |
 | 2133 | Check if Every Row and Column Contains All Numbers | matrix |
 | 2279 | Maximum Bags With Full Capacity of Rocks | greedy        |
+| 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
