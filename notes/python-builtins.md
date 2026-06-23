@@ -138,7 +138,8 @@ from itertools import accumulate
 list(accumulate([1, 2, 3, 4]))  # [1, 3, 6, 10]
 ```
 
-Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
+Used in: [running_sum_1480.py](../patterns/array/running_sum_1480.py),
+[longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
 
 ---
 

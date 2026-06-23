@@ -85,4 +85,6 @@ def areAlmostEqual(s1, s2):
 
 - Keep solutions faithful to the user's own code; don't silently "improve" logic.
   If a change is needed for correctness (e.g. a missing modulo), call it out.
-- Comments should be concise.
+- Comments should be concise. Use short `#` comments for brief notes; for a long
+  explanation, use a triple-quoted block (`""" ... """`) instead of many stacked
+  `#` lines.

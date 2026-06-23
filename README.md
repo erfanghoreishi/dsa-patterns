@@ -24,6 +24,8 @@ importable Python module.
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
 | 1436 | Destination City                 | hashmap            |
+| 1480 | Running Sum of 1d Array          | array              |
+| 2164 | Sort Even and Odd Indices Independently | array         |
 | 3174 | Clear Digits                     | stack              |
 | 1678 | Goal Parser Interpretation       | string             |
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |
@@ -41,6 +43,7 @@ importable Python module.
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
+| 3884 | First Matching Character From Both Ends | two-pointers |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.
