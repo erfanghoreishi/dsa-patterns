@@ -26,6 +26,7 @@ importable Python module.
 | 1436 | Destination City                 | hashmap            |
 | 1480 | Running Sum of 1d Array          | array              |
 | 2164 | Sort Even and Odd Indices Independently | array         |
+| 2225 | Find Players With Zero or One Losses | hashmap        |
 | 3174 | Clear Digits                     | stack              |
 | 1678 | Goal Parser Interpretation       | string             |
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |

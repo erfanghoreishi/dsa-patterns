@@ -104,13 +104,16 @@ Used in: _(not yet used)_
 ## `Counter`
 
 `collections.Counter` is a dict subclass that tallies occurrences of hashable
-items. `most_common(n)` returns the n highest-frequency entries.
+items — the one-step form of `d[x] = d.get(x, 0) + 1` in a loop. `most_common(n)`
+returns the n highest-frequency entries.
 
 ```python
-# TODO: write an example using Counter
+from collections import Counter
+Counter(['a', 'b', 'a'])      # Counter({'a': 2, 'b': 1})
+Counter("banana")['a']        # 3  (missing keys give 0, no KeyError)
 ```
 
-Used in: _(not yet used)_
+Used in: [find_winners_2225.py](../patterns/hashmap/find_winners_2225.py)
 
 ---
 
