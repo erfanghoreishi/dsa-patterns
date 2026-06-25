@@ -7,6 +7,7 @@
 | 0070 | Climbing Stairs | dynamic-programming | ⚠️ Redo | 2026-06-16 | DP base-case counting |
 | 0290 | Word Pattern | hashmap | ⚠️ Redo | 2026-06-18 | bijection check |
 | 0763 | Partition Labels | greedy | ⚠️ Redo | 2026-06-18 | furthest-reach greedy |
+| 0867 | Transpose Matrix | matrix | ⚠️ Redo | 2026-06-18 | nested list comprehension; in-place square version → 48 Rotate Image |
 
 Status key:
 

@@ -20,6 +20,7 @@ importable Python module.
 |------|----------------------------------|--------------------|
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
+| 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
 | 0290 | Word Pattern                     | hashmap            |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
@@ -31,6 +32,7 @@ importable Python module.
 | 1678 | Goal Parser Interpretation       | string             |
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |
 | 3794 | Reverse Prefix                   | two-pointers       |
+| 0867 | Transpose Matrix                 | matrix             |
 | 0883 | Projection Area of 3D Shapes     | matrix             |
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
