@@ -18,6 +18,7 @@ importable Python module.
 
 | #    | Problem                          | Pattern            |
 |------|----------------------------------|--------------------|
+| 0021 | Merge Two Sorted Lists           | linked-list        |
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
@@ -34,6 +35,8 @@ importable Python module.
 | 3794 | Reverse Prefix                   | two-pointers       |
 | 0867 | Transpose Matrix                 | matrix             |
 | 0883 | Projection Area of 3D Shapes     | matrix             |
+| 0942 | DI String Match                  | greedy             |
+| 1338 | Reduce Array Size to The Half    | hashmap            |
 | 1518 | Water Bottles                    | math               |
 | 2379 | Minimum Recolors                 | sliding-window     |
 | 1725 | Number Of Rectangles That Can Form The Largest Square | array |
@@ -42,6 +45,7 @@ importable Python module.
 | 2279 | Maximum Bags With Full Capacity of Rocks | greedy        |
 | 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
+| 2502 | Design Memory Allocator          | design             |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 3668 | Restore Finishing Order          | hashmap            |

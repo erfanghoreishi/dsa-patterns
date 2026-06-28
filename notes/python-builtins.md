@@ -45,10 +45,15 @@ Returns a new sorted list from any iterable (the original is untouched). Support
 a `key` function and `reverse=True`.
 
 ```python
-sorted([4, 5, 2, 1])  # [1, 2, 4, 5]
+sorted([4, 5, 2, 1])                                  # [1, 2, 4, 5]
+
+# sorting a dict/Counter: sorted(d) sorts its KEYS — usually not what you want.
+# use .items() and a key to sort by value:
+sorted(counts.items(), key=lambda kv: kv[1], reverse=True)   # (key, count) by count desc
 ```
 
-Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
+Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py),
+[min_set_size_1338.py](../patterns/hashmap/min_set_size_1338.py) (sort Counter items by count)
 
 ---
 

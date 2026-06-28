@@ -8,6 +8,8 @@
 | 0290 | Word Pattern | hashmap | ⚠️ Redo | 2026-06-18 | bijection check |
 | 0763 | Partition Labels | greedy | ⚠️ Redo | 2026-06-18 | furthest-reach greedy |
 | 0867 | Transpose Matrix | matrix | ⚠️ Redo | 2026-06-18 | nested list comprehension; in-place square version → 48 Rotate Image |
+| 0021 | Merge Two Sorted Lists | linked-list | ⚠️ Redo | 2026-06-18 | dummy head + pointer juggling; trace on paper |
+| 2502 | Design Memory Allocator | design | ⚠️ Redo | 2026-06-18 | free-run scan + per-mID block tracking |
 
 Status key:
 
