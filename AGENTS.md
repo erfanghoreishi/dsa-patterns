@@ -81,6 +81,14 @@ def areAlmostEqual(s1, s2):
     ...
 ```
 
+## Stateful I/O problems (Codeforces-style)
+
+For judges that stream a sequence of commands over stdin (e.g. Codeforces 7B):
+hold the state in a **class whose methods RETURN their output** (id / `"NULL"` /
+`None` for no output) instead of printing, so tests can drive it; keep a thin
+`__main__` driver that **dict-dispatches** commands and prints any non-`None`
+return. See [memory_manager_cf7b.py](patterns/design/memory_manager_cf7b.py).
+
 ## Notes on style
 
 - Keep solutions faithful to the user's own code; don't silently "improve" logic.

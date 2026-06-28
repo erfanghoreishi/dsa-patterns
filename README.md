@@ -41,6 +41,7 @@ importable Python module.
 | 2379 | Minimum Recolors                 | sliding-window     |
 | 1725 | Number Of Rectangles That Can Form The Largest Square | array |
 | 1790 | Check if One String Swap Can Make Strings Equal | string |
+| 2129 | Capitalize the Title             | string             |
 | 2133 | Check if Every Row and Column Contains All Numbers | matrix |
 | 2279 | Maximum Bags With Full Capacity of Rocks | greedy        |
 | 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |
@@ -51,6 +52,7 @@ importable Python module.
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | 3884 | First Matching Character From Both Ends | two-pointers |
+| CF 7B | Memory Manager                 | design             |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.

@@ -250,3 +250,20 @@ a >= b             # superset
 
 Used in: [can_be_typed_words_1935.py](../patterns/hashmap/can_be_typed_words_1935.py)
 (`set(word) & broken` to test for a broken letter; `isdisjoint` is the cleaner form)
+
+---
+
+## `upper` / `lower`
+
+`str.upper()` / `str.lower()` return a **new** string with every letter cased up or
+down (strings are immutable, so the original is unchanged). Non-letters pass
+through unchanged. Common for case-insensitive compares and title-casing by hand.
+
+```python
+"aB3".upper()              # 'AB3'
+"aB3".lower()              # 'ab3'
+w = "hELLO"
+w[0].upper() + w[1:].lower()  # 'Hello'  — capitalize just the first letter
+```
+
+Used in: [capitalize_title_2129.py](../patterns/string/capitalize_title_2129.py)
