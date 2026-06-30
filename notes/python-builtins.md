@@ -26,6 +26,22 @@ Used in: [projection_area_0883.py](../patterns/matrix/projection_area_0883.py),
 
 ---
 
+## `itertools.zip_longest`
+
+Like `zip`, but runs until the **longest** iterable is exhausted, padding the
+shorter ones with `fillvalue` (default `None`). Use it to pair up unequal-length
+sequences without dropping the tail.
+
+```python
+from itertools import zip_longest
+list(zip_longest("ab", "pqrs", fillvalue=""))  # [('a','p'), ('b','q'), ('','r'), ('','s')]
+```
+
+Used in: [merge_alternately_1768.py](../patterns/two-pointers/merge_alternately_1768.py)
+(pads the shorter word with `""` so leftover characters still get appended)
+
+---
+
 ## `enumerate`
 
 Yields `(index, value)` pairs while iterating, so you get the index without

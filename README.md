@@ -25,6 +25,8 @@ importable Python module.
 | 0290 | Word Pattern                     | hashmap            |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
+| 1071 | Greatest Common Divisor of Strings | string           |
+| 1108 | Defanging an IP Address          | string             |
 | 1436 | Destination City                 | hashmap            |
 | 1480 | Running Sum of 1d Array          | array              |
 | 2164 | Sort Even and Odd Indices Independently | array         |
@@ -37,11 +39,16 @@ importable Python module.
 | 0883 | Projection Area of 3D Shapes     | matrix             |
 | 0942 | DI String Match                  | greedy             |
 | 1338 | Reduce Array Size to The Half    | hashmap            |
+| 0539 | Minimum Time Difference          | array              |
 | 1518 | Water Bottles                    | math               |
+| 1603 | Design Parking System            | design             |
 | 2379 | Minimum Recolors                 | sliding-window     |
 | 1725 | Number Of Rectangles That Can Form The Largest Square | array |
 | 1790 | Check if One String Swap Can Make Strings Equal | string |
+| 1816 | Truncate Sentence                | string             |
+| 1845 | Seat Reservation Manager         | design             |
 | 2129 | Capitalize the Title             | string             |
+| 2114 | Maximum Number of Words Found in Sentences | string     |
 | 2133 | Check if Every Row and Column Contains All Numbers | matrix |
 | 2279 | Maximum Bags With Full Capacity of Rocks | greedy        |
 | 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |

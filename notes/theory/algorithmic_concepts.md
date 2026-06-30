@@ -83,3 +83,18 @@ depends on whether the **middle** of an odd-length input matters:
 (`n//2` — middle char is already a palindrome center, left untouched) and
 [first_matching_index_3884.py](../../patterns/two-pointers/first_matching_index_3884.py)
 (`n//2 + 1` — the middle char is a valid self-match).
+
+---
+
+## 5. Circular (clock) time difference
+
+Parse `"HH:MM"` to minutes: `int(t[:2]) * 60 + int(t[3:])`. A day is `1440` minutes
+and the clock **wraps**, so the gap between two times is `min(d, 1440 - d)` where
+`d` is the straight difference — e.g. `00:00` and `23:59` are `1` minute apart.
+
+For the minimum over many times: **sort**, take the smallest adjacent gap, then also
+check the wrap between the largest and smallest, `1440 - max + min`. No other pair
+needs a wrap check — sorted order guarantees the straight gap is shortest for them.
+
+**Referenced in:** [min_time_difference_0539.py](../../patterns/array/min_time_difference_0539.py)
+   
