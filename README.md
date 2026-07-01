@@ -31,6 +31,7 @@ importable Python module.
 | 1480 | Running Sum of 1d Array          | array              |
 | 2164 | Sort Even and Odd Indices Independently | array         |
 | 2225 | Find Players With Zero or One Losses | hashmap        |
+| 2243 *SIG | Calculate Digit Sum of a String | string         |
 | 3174 | Clear Digits                     | stack              |
 | 1678 | Goal Parser Interpretation       | string             |
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |
@@ -53,17 +54,20 @@ importable Python module.
 | 2279 | Maximum Bags With Full Capacity of Rocks | greedy        |
 | 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
-| 2502 | Design Memory Allocator          | design             |
+| 2502 *SIG | Design Memory Allocator      | design             |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | 3884 | First Matching Character From Both Ends | two-pointers |
+| *SIG  | Swap Adjacent Character Pairs    | string             |
 | CF 7B | Memory Manager                 | design             |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.
 `polynomial_value_quera.py`).
+
+<sub>*Company marks an interview question (e.g. *SIG = Susquehanna International Group).</sub>
 
 ## Notes
 
