@@ -283,3 +283,17 @@ w[0].upper() + w[1:].lower()  # 'Hello'  — capitalize just the first letter
 ```
 
 Used in: [capitalize_title_2129.py](../patterns/string/capitalize_title_2129.py)
+
+---
+
+## `ord` / `chr`
+
+`ord(c)` → code point (int); `chr(n)` → char. `ord(c) - ord('a')` maps `'a'..'z'`
+to `0..25` for indexing a 26-slot array by letter.
+
+```python
+ord('c') - ord('a')  # 2
+chr(ord('a') + 2)    # 'c'
+```
+
+Used in: [number_of_lines_0806.py](../patterns/string/number_of_lines_0806.py)
