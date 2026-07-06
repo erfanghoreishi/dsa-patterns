@@ -97,4 +97,40 @@ check the wrap between the largest and smallest, `1440 - max + min`. No other pa
 needs a wrap check — sorted order guarantees the straight gap is shortest for them.
 
 **Referenced in:** [min_time_difference_0539.py](../../patterns/array/min_time_difference_0539.py)
+
+---
+
+## 6. Gauss's sum: 1 + 2 + ... + n = n(n+1)/2
+
+Pair the terms from the two ends: `(1 + n), (2 + n-1), (3 + n-2), ...`. Each pair
+sums to `n + 1`, and there are `n/2` pairs, so the total is `n(n+1)/2`. (Odd `n`
+works too — the lone middle term `(n+1)/2` fits the same formula.)
+
+```
+ 1 +  2 +  3 + 4
+ 4 +  3 +  2 + 1     <- same sum reversed
+ 5 +  5 +  5 + 5  =  4 x 5  =  n(n+1)   ->  half of that is n(n+1)/2
+```
+
+Common uses: the number of unordered pairs among `k` items is `k(k-1)/2` (that's the
+sum `1..k-1`); triangular numbers; counting iterations of an `O(n^2)` double loop.
+
+**Referenced in:** [num_identical_pairs_1512.py](../../patterns/hashmap/num_identical_pairs_1512.py)
+— a value seen `n` times contributes `n(n-1)/2` good pairs.
+
+---
+
+## 7. XOR properties (self-inverse) and the prefix-XOR range trick
+
+Core identities: `x ^ x = 0`, `x ^ 0 = x`, and XOR is commutative & associative.
+A key consequence: `a == b  ⟺  a ^ b == 0`.
+
+**Range trick:** split `arr[i..k]` at some `j` into `a = XOR(i..j-1)` and
+`b = XOR(j..k)`. Because the two halves cover the whole range with no overlap,
+`a ^ b = XOR(i..k)` — the split point `j` cancels out entirely. So
+`a == b  ⟺  XOR(i..k) == 0`, a condition that **doesn't mention `j`**. One such
+`XOR(i..k) == 0` therefore holds for *every* split `j` at once — all `k - i` of them.
+
+**Referenced in:** [count_triplets_1442.py](../../patterns/bit-manipulation/count_triplets_1442.py)
+— counts `k - i` triplets (not `1`) each time `XOR(arr[i..k]) == 0`.
    

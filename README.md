@@ -30,6 +30,7 @@ importable Python module.
 | 1071 | Greatest Common Divisor of Strings | string           |
 | 1108 | Defanging an IP Address          | string             |
 | 1436 | Destination City                 | hashmap            |
+| 1442 | Count Triplets That Can Form Two Arrays of Equal XOR | bit-manipulation |
 | 1480 | Running Sum of 1d Array          | array              |
 | 2164 | Sort Even and Odd Indices Independently | array         |
 | 2225 | Find Players With Zero or One Losses | hashmap        |
@@ -42,9 +43,11 @@ importable Python module.
 | 0806 | Number of Lines To Write String  | string             |
 | 0929 | Unique Email Addresses           | hashmap            |
 | 0883 | Projection Area of 3D Shapes     | matrix             |
+| 0938 | Range Sum of BST                 | tree               |
 | 0942 | DI String Match                  | greedy             |
 | 1338 | Reduce Array Size to The Half    | hashmap            |
 | 0539 | Minimum Time Difference          | array              |
+| 1512 | Number of Good Pairs             | hashmap            |
 | 1518 | Water Bottles                    | math               |
 | 1603 | Design Parking System            | design             |
 | 2379 | Minimum Recolors                 | sliding-window     |
