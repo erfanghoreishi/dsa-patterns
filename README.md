@@ -27,6 +27,7 @@ importable Python module.
 | 0290 | Word Pattern                     | hashmap            |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
+| 0482 | License Key Formatting           | string             |
 | 1071 | Greatest Common Divisor of Strings | string           |
 | 1108 | Defanging an IP Address          | string             |
 | 1436 | Destination City                 | hashmap            |
@@ -66,6 +67,7 @@ importable Python module.
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
+| 3754 | Concatenate Non-Zero Digits and Multiply by Sum I | math |
 | 3884 | First Matching Character From Both Ends | two-pointers |
 | *SIG  | Swap Adjacent Character Pairs    | string             |
 | CF 7B | Memory Manager                 | design             |
