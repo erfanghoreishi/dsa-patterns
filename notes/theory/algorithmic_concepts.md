@@ -133,4 +133,25 @@ A key consequence: `a == b  ⟺  a ^ b == 0`.
 
 **Referenced in:** [count_triplets_1442.py](../../patterns/bit-manipulation/count_triplets_1442.py)
 — counts `k - i` triplets (not `1`) each time `XOR(arr[i..k]) == 0`.
+
+---
+
+## 8. Fixed-width zero-padded strings compare like numbers
+
+If values are formatted with **fixed-width, zero-padded** fields in
+most-significant-first order (e.g. `"2017:01:01:23:59:59"`), then Python's
+lexicographic string comparison (`<`, `<=`) matches their natural / chronological
+order — so you can compare (or slice a prefix and compare) without parsing to ints.
+
+```python
+"2016:12" < "2017:01"     # True
+"09:30"   < "10:00"       # True  — zero-padding is essential ("9" > "1" lexically)
+```
+
+Slicing a prefix compares only down to a chosen field (e.g. `ts[:4]` = year,
+`ts[:13]` = hour). **Caveat:** breaks the moment fields aren't zero-padded to equal
+width.
+
+**Referenced in:** [log_system_0635.py](../../patterns/design/log_system_0635.py)
+— compares timestamp prefixes by granularity, no int conversion.
    

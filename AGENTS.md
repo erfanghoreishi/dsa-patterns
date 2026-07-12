@@ -22,12 +22,14 @@ Personal LeetCode/competitive-programming practice, organized by algorithmic pat
    name (`from <name>_<id> import <func>`). Cover the given examples plus edge
    cases. Run from inside the folder: `cd patterns/<pattern> && pytest`.
 
-5. **List it in the README** problems table. Use the source tag in the `#` column
-   for non-LeetCode entries.
+5. **List it in the README** problems table. Do this **automatically, without
+   asking** — adding the new problem's row is a routine part of adding a solution.
+   Use the source tag in the `#` column for non-LeetCode entries.
 
 6. **Add to notes when relevant — but ASK FIRST.** Before editing any file under
-   `notes/` (or the README), propose the change and wait for confirmation; don't
-   edit them unprompted.
+   `notes/`, or making any README change *beyond* the new problem's table row
+   (step 5), propose the change and wait for confirmation; don't edit them
+   unprompted.
    - `notes/tricks.md` — if there's a clever one-liner or non-obvious pattern.
      Include a snippet and a `From:` link to the file.
    - `notes/python-builtins.md` — this is meant to be a reference for **every**

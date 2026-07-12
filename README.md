@@ -18,12 +18,14 @@ importable Python module.
 
 | #    | Problem                          | Pattern            |
 |------|----------------------------------|--------------------|
+| 0003 | Longest Substring Without Repeating Characters | sliding-window |
 | 0021 | Merge Two Sorted Lists           | linked-list        |
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0119 | Pascal's Triangle II             | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
 | 0338 | Counting Bits                    | dynamic-programming |
+| 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
@@ -48,6 +50,7 @@ importable Python module.
 | 0942 | DI String Match                  | greedy             |
 | 1338 | Reduce Array Size to The Half    | hashmap            |
 | 0539 | Minimum Time Difference          | array              |
+| 0635 | Design Log Storage System        | design             |
 | 1512 | Number of Good Pairs             | hashmap            |
 | 1518 | Water Bottles                    | math               |
 | 1603 | Design Parking System            | design             |
@@ -65,6 +68,7 @@ importable Python module.
 | 2502 *SIG | Design Memory Allocator      | design             |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
+| 3637 | Trionic Array I                  | array              |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | 3754 | Concatenate Non-Zero Digits and Multiply by Sum I | math |
