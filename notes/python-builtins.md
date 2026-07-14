@@ -1,6 +1,8 @@
 # Python Built-ins & String Methods — Cheat Sheet
 
-Reference for built-ins and string methods commonly used in DSA solutions.
+Reference for **always-available** built-in functions and `str`/`list`/`set`/`dict`
+methods (no `import` needed). Import-required modules (`heapq`, `bisect`,
+`collections`, `itertools`, `re`, …) live in [python-stdlib.md](python-stdlib.md).
 
 > **Note:** Entries still marked with a `# TODO` example aren't used in any
 > solution under `patterns/` yet. Fill in the `Used in:` line (and replace the
@@ -23,22 +25,6 @@ for col in zip(*grid):
 
 Used in: [projection_area_0883.py](../patterns/matrix/projection_area_0883.py),
 [check_valid_2133.py](../patterns/matrix/check_valid_2133.py)
-
----
-
-## `itertools.zip_longest`
-
-Like `zip`, but runs until the **longest** iterable is exhausted, padding the
-shorter ones with `fillvalue` (default `None`). Use it to pair up unequal-length
-sequences without dropping the tail.
-
-```python
-from itertools import zip_longest
-list(zip_longest("ab", "pqrs", fillvalue=""))  # [('a','p'), ('b','q'), ('','r'), ('','s')]
-```
-
-Used in: [merge_alternately_1768.py](../patterns/two-pointers/merge_alternately_1768.py)
-(pads the shorter word with `""` so leftover characters still get appended)
 
 ---
 
@@ -70,100 +56,6 @@ sorted(counts.items(), key=lambda kv: kv[1], reverse=True)   # (key, count) by c
 
 Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py),
 [min_set_size_1338.py](../patterns/hashmap/min_set_size_1338.py) (sort Counter items by count)
-
----
-
-## `heapq`
-
-Binary **min**-heap on a plain list (smallest stays at index 0). Key functions:
-- `heapify(lst)` — turn a list into a heap in place, O(n)
-- `heappush(heap, x)` — add an item, O(log n)
-- `heappop(heap)` — remove & return the smallest, O(log n)
-- `heap[0]` — peek the smallest, O(1)
-
-For a **max**-heap, push negated values (`-x`) and negate again on the way out.
-
-```python
-import heapq
-h = [3, 1, 2]
-heapq.heapify(h)        # [1, 3, 2]
-heapq.heappush(h, 0)
-heapq.heappop(h)        # 0  (the smallest)
-```
-
-Used in: [maximum_score_1753.py](../patterns/heap/maximum_score_1753.py)
-
----
-
-## `defaultdict`
-
-`collections.defaultdict` is a dict that auto-creates a default value (via a
-factory like `int`, `list`, `set`) on first access to a missing key — removes the
-need for `if key not in d` guards.
-
-```python
-# TODO: write an example using defaultdict
-```
-
-Used in: _(not yet used)_
-
----
-
-## `deque`
-
-`collections.deque` is a double-ended queue with O(1) `append`/`appendleft` and
-`pop`/`popleft`. Ideal for BFS queues and sliding windows.
-
-```python
-# TODO: write an example using deque
-```
-
-Used in: _(not yet used)_
-
----
-
-## `Counter`
-
-`collections.Counter` is a dict subclass that tallies occurrences of hashable
-items — the one-step form of `d[x] = d.get(x, 0) + 1` in a loop. `most_common(n)`
-returns the n highest-frequency entries.
-
-```python
-from collections import Counter
-Counter(['a', 'b', 'a'])      # Counter({'a': 2, 'b': 1})
-Counter("banana")['a']        # 3  (missing keys give 0, no KeyError)
-```
-
-Used in: [find_winners_2225.py](../patterns/hashmap/find_winners_2225.py)
-
----
-
-## `bisect`
-
-Binary search on a sorted list. `bisect_right(list, x)` returns the index where
-`x` would be inserted to keep the list sorted — which tells you how many elements
-are ≤ x. (`bisect_left` gives the count of elements strictly < x.)
-
-```python
-from bisect import bisect_right
-bisect_right([1, 3, 5, 7], 5)  # 3 — index after the 5
-```
-
-Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
-
----
-
-## `itertools.accumulate`
-
-Builds a running cumulative sum (or other operation) from a list.
-
-```python
-from itertools import accumulate
-list(accumulate([1, 2, 3, 4]))  # [1, 3, 6, 10]
-```
-
-Used in: [running_sum_1480.py](../patterns/array/running_sum_1480.py),
-[longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
 
 ---
 

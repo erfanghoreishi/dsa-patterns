@@ -32,11 +32,14 @@ Personal LeetCode/competitive-programming practice, organized by algorithmic pat
    unprompted.
    - `notes/tricks.md` — if there's a clever one-liner or non-obvious pattern.
      Include a snippet and a `From:` link to the file.
-   - `notes/python-builtins.md` — this is meant to be a reference for **every**
-     Python built-in, not only a fixed tracked subset. When a solution uses a
-     built-in (or string method) that isn't documented yet, add an entry for it;
-     when it uses one already present as a TODO placeholder, fill in the real
-     example and set its `Used in:` link.
+   - `notes/python-builtins.md` and `notes/python-stdlib.md` — references for
+     Python's building blocks. **Split by the "needs an `import`?" rule:**
+     always-available built-ins and `str`/`list`/`set`/`dict` methods go in
+     `python-builtins.md`; anything imported (`heapq`, `bisect`, `collections`,
+     `itertools`, `re`, `datetime`, `math`, `functools`, …) goes in
+     `python-stdlib.md`. When a solution uses one that isn't documented yet, add an
+     entry (what it does, a short example, a `Used in:` link); when it uses one
+     present as a TODO placeholder, fill in the real example and set the link.
    - `notes/redo.md` — if it's a problem to revisit (status ❌ Stuck / ⚠️ Redo).
    - `notes/theory/` — for reusable theory, not per-problem tricks: e.g.
      `algorithmic_concepts.md` (general algorithm/math ideas like bijection,

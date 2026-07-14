@@ -68,6 +68,7 @@ importable Python module.
 | 2502 *SIG | Design Memory Allocator      | design             |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
+| 2951 | Find the Peaks                   | array              |
 | 3637 | Trionic Array I                  | array              |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
@@ -76,6 +77,7 @@ importable Python module.
 | *SIG  | Swap Adjacent Character Pairs    | string             |
 | CF 7B | Memory Manager                 | design             |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
+| Practice | Subscription Tracker (datetime) | python            |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.
 `polynomial_value_quera.py`).
@@ -85,6 +87,7 @@ Non-LeetCode problems use their source as a tag instead of a number (e.g.
 ## Notes
 
 - [notes/python-builtins.md](notes/python-builtins.md) — built-ins & string-method cheat sheet
+- [notes/python-stdlib.md](notes/python-stdlib.md) — import-required stdlib modules (heapq, bisect, collections, itertools, …)
 - [notes/tricks.md](notes/tricks.md) — clever one-liners and non-obvious patterns
 - [notes/redo.md](notes/redo.md) — tracker for problems to revisit
 - [notes/theory/](notes/theory/) — reusable theory: [algorithmic concepts](notes/theory/algorithmic_concepts.md) (bijection, inversions, …) and the [Master Theorem](notes/theory/recursive_functions_big_o_master_theorem.md)
