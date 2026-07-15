@@ -116,7 +116,9 @@ Common uses: the number of unordered pairs among `k` items is `k(k-1)/2` (that's
 sum `1..k-1`); triangular numbers; counting iterations of an `O(n^2)` double loop.
 
 **Referenced in:** [num_identical_pairs_1512.py](../../patterns/hashmap/num_identical_pairs_1512.py)
-— a value seen `n` times contributes `n(n-1)/2` good pairs.
+— a value seen `n` times contributes `n(n-1)/2` good pairs; and
+[b_nikita_books.py](../../contests/codeforces/round-1109-div3/b_nikita_books.py)
+— each prefix sum must reach the triangular number `k(k+1)/2`.
 
 ---
 

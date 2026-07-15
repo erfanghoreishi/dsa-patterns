@@ -6,8 +6,9 @@ file and matching pytest tests.
 ## Structure
 
 ```
-patterns/<pattern>/<name>_<leetcode#>.py       # solution
+patterns/<pattern>/<name>_<leetcode#>.py       # solution (organized by pattern)
 patterns/<pattern>/test_<name>_<leetcode#>.py  # tests
+contests/<judge>/<round>/<index>_<slug>.py     # contest solutions (grouped by contest)
 notes/                                          # shared reference docs
 ```
 
@@ -83,6 +84,15 @@ Non-LeetCode problems use their source as a tag instead of a number (e.g.
 `polynomial_value_quera.py`).
 
 <sub>*Company marks an interview question (e.g. *SIG = Susquehanna International Group).</sub>
+
+## Contest problems
+
+Whole contests are grouped by contest under `contests/` (not scattered into the
+pattern table above). Each round has its own README.
+
+| Contest | Problems |
+|---------|----------|
+| [Codeforces Round 1109 (Div. 3)](contests/codeforces/round-1109-div3/) | A. Iskander and Drawings · B. Nikita Books |
 
 ## Notes
 

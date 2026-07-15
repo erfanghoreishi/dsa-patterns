@@ -94,6 +94,23 @@ hold the state in a **class whose methods RETURN their output** (id / `"NULL"` /
 `__main__` driver that **dict-dispatches** commands and prints any non-`None`
 return. See [memory_manager_cf7b.py](patterns/design/memory_manager_cf7b.py).
 
+## Contest problems (Codeforces-style rounds)
+
+Whole contests live **outside** `patterns/`, grouped by contest (not scattered by
+algorithmic pattern):
+
+    contests/<judge>/<round>/<index>_<slug>.py
+    contests/<judge>/<round>/test_<index>_<slug>.py
+    # e.g. contests/codeforces/round-1109-div3/a_iskander_drawings.py
+
+- Keep the testable shape: a pure `solve(...)` plus a thin `__main__` that reads the
+  stdin format (usually a `t` test-case loop) and prints. Tests import `solve`.
+- `<index>` is the contest problem letter (`a`, `b`, …); the round is already in the
+  path, so no contest-id tag is needed in the filename.
+- Each round folder gets a small `README.md` listing its problems (A, B, C, …).
+- Contest problems do **not** go in the main README problems table — list them in
+  the separate "Contest problems" section of `README.md` instead.
+
 ## Notes on style
 
 - Keep solutions faithful to the user's own code; don't silently "improve" logic.
