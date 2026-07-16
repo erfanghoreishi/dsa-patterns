@@ -44,6 +44,7 @@ importable Python module.
 | 2367 | Number of Arithmetic Triplets    | two-pointers       |
 | 3794 | Reverse Prefix                   | two-pointers       |
 | 0867 | Transpose Matrix                 | matrix             |
+| 0804 | Unique Morse Code Words          | hashmap            |
 | 0806 | Number of Lines To Write String  | string             |
 | 0929 | Unique Email Addresses           | hashmap            |
 | 0883 | Projection Area of 3D Shapes     | matrix             |

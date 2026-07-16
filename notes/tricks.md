@@ -277,3 +277,27 @@ diffs = [(a, b) for a, b in zip(s1, s2) if a != b]
 ```
 
 From: [are_almost_equal_1790.py](../patterns/string/are_almost_equal_1790.py)
+
+---
+
+## Nested inline `for`: a comprehension inside a comprehension
+
+A comprehension's *element* can itself be a comprehension/generator — giving you two
+inline loops in one expression. Here the **outer** loop walks words, the **inner**
+generator builds each word's code:
+
+```python
+# unique_morse_representations_0804.py  (LC 804)
+transitions = {"".join(MORSE[ord(char) - ord('a')] for char in word)   # inner: per char
+               for word in words}                                       # outer: per word
+return len(transitions)
+```
+
+Two things to notice:
+- `{...}` with **no `key: value`** is a **set** comprehension (a dict needs a colon).
+  So duplicates collapse automatically and `len()` is the answer — no manual dedup.
+- This differs from the flat `[x for a in outer for b in inner]` form (see the
+  2D-grid trick above): there the `for`s are *chained* in one comprehension; here one
+  comprehension is *nested inside* another.
+
+From: [unique_morse_representations_0804.py](../patterns/hashmap/unique_morse_representations_0804.py)
