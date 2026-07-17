@@ -25,6 +25,7 @@ importable Python module.
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0119 | Pascal's Triangle II             | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
+| 0198 | House Robber                     | dynamic-programming |
 | 0338 | Counting Bits                    | dynamic-programming |
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
