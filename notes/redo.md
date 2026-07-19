@@ -13,6 +13,7 @@
 | 0539 | Minimum Time Difference | array | ⚠️ Redo | 2026-06-18 | circular clock wraparound |
 | 1442 | Count Triplets That Can Form Two Arrays of Equal XOR | bit-manipulation | ⚠️ Redo | 2026-06-30 | prefix XOR; count += k-i (j cancels out) |
 | 0804 | Unique Morse Code Words | hashmap | ⚠️ Redo | 2026-06-30 | practice nested inline for (set comprehension + inner generator) |
+| 0062 | Unique Paths | dynamic-programming | ⚠️ Redo | 2026-06-30 | O(m*n) DP works; find a more efficient solution (1D DP, or C(m+n-2, m-1)) |
 
 Status key:
 

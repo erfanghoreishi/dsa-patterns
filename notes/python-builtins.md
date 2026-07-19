@@ -189,3 +189,24 @@ chr(ord('a') + 2)    # 'c'
 ```
 
 Used in: [number_of_lines_0806.py](../patterns/string/number_of_lines_0806.py)
+
+---
+
+## `:=` (walrus / assignment expression)
+
+Assigns **and** returns a value inside an expression, so you can read and test in
+one place — handy for a loop that consumes input until a sentinel without writing
+the read twice.
+
+```python
+res = []
+while (num := input()) != '0':   # read, assign to num, and test — all at once
+    res.append(num)
+print("\n".join(res[::-1]))       # collected lines, reversed
+
+# also: if (n := len(data)) > 10: ...   /   [y for x in xs if (y := f(x)) is not None]
+```
+
+Without it you'd read once before the loop and again at the end of each iteration.
+
+Used in: _(general Python idiom)_

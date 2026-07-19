@@ -22,6 +22,7 @@ importable Python module.
 | 0003 | Longest Substring Without Repeating Characters | sliding-window |
 | 0021 | Merge Two Sorted Lists           | linked-list        |
 | 0053 | Maximum Subarray                 | dynamic-programming |
+| 0062 | Unique Paths                     | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0119 | Pascal's Triangle II             | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
@@ -29,6 +30,7 @@ importable Python module.
 | 0338 | Counting Bits                    | dynamic-programming |
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
+| 0746 | Min Cost Climbing Stairs         | dynamic-programming |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
 | 0482 | License Key Formatting           | string             |
@@ -80,6 +82,7 @@ importable Python module.
 | *SIG  | Swap Adjacent Character Pairs    | string             |
 | CF 7B | Memory Manager                 | design             |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |
+| Quera | Minesweeper                    | matrix             |
 | Practice | Subscription Tracker (datetime) | python            |
 
 Non-LeetCode problems use their source as a tag instead of a number (e.g.

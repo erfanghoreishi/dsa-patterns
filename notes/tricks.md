@@ -301,3 +301,29 @@ Two things to notice:
   comprehension is *nested inside* another.
 
 From: [unique_morse_representations_0804.py](../patterns/hashmap/unique_morse_representations_0804.py)
+
+---
+
+## Direction vectors to visit grid neighbours (no repeated ifs)
+
+List the neighbour offsets once, then loop over them — instead of writing eight
+separate `if` checks for up/down/left/right/diagonals.
+
+```python
+# minesweeper_quera.py  (Quera – Minesweeper)
+DIRECTIONS = [(-1,-1), (-1,0), (-1,1), (0,-1), (0,1), (1,-1), (1,0), (1,1)]
+
+count = 0
+for dr, dc in DIRECTIONS:          # one loop covers all 8 neighbours
+    if (r + dr, c + dc) in bombs:
+        count += 1
+```
+
+Storing cells in a `set` (here `bombs`) makes each neighbour test O(1) and sidesteps
+bounds checks — an out-of-grid `(r+dr, c+dc)` simply isn't in the set. Use 4 offsets
+for orthogonal-only moves, 8 for including diagonals.
+
+Once the loop is clear, it collapses to a one-liner (as in the solution file):
+`count = sum((r + dr, c + dc) in bombs for dr, dc in DIRECTIONS)`.
+
+From: [minesweeper_quera.py](../patterns/matrix/minesweeper_quera.py)
