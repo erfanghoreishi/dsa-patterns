@@ -27,6 +27,8 @@ importable Python module.
 | 0119 | Pascal's Triangle II             | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
 | 0198 | House Robber                     | dynamic-programming |
+| 0300 | Longest Increasing Subsequence   | dynamic-programming |
+| 0322 | Coin Change                      | dynamic-programming |
 | 0338 | Counting Bits                    | dynamic-programming |
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |

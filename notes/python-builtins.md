@@ -41,6 +41,21 @@ Used in: _(not yet used)_
 
 ---
 
+## `max` / `min` — the `default=` parameter
+
+`max()`/`min()` on an **empty** iterable raise `ValueError`. Pass `default=` to get a
+fallback instead — handy when a comprehension may filter everything out. (Python 3.4+.)
+
+```python
+max([])              # ValueError: max() iterable argument is empty
+max([], default=0)   # 0
+```
+
+Used in: [length_of_lis_0300.py](../patterns/dynamic-programming/length_of_lis_0300.py)
+(`default=0` when no earlier element is smaller)
+
+---
+
 ## `sorted`
 
 Returns a new sorted list from any iterable (the original is untouched). Supports
