@@ -221,6 +221,21 @@ From: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longes
 
 ---
 
+## Inline swap without a temp variable
+
+`a, b = b, a` swaps two values in one line — Python packs the right side into a
+tuple first, then unpacks it into the left, so no `temp` is needed. Works for list
+elements too.
+
+```python
+# reverse_string_0344.py  (LC 344 – Reverse String)
+s[right], s[left] = s[left], s[right]
+```
+
+From: [reverse_string_0344.py](../patterns/two-pointers/reverse_string_0344.py)
+
+---
+
 ## Tuple unpacking to name coordinates
 
 A `(row, col)` tuple can be split straight into two variables in one line, so you

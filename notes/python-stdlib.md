@@ -119,6 +119,23 @@ Used in: [merge_alternately_1768.py](../patterns/two-pointers/merge_alternately_
 
 ---
 
+## `itertools.groupby`
+
+Groups **consecutive** equal items, yielding `(key, group_iterator)` pairs. Only
+runs that are already adjacent are grouped — so unlike SQL GROUP BY, you usually
+sort first if you want global grouping. The group iterator is consumed lazily, so
+`len(list(g))` to count a run.
+
+```python
+from itertools import groupby
+[(k, len(list(g))) for k, g in groupby("11000111")]  # [('1', 2), ('0', 3), ('1', 3)]
+```
+
+Used in: [count_binary_substrings_0696.py](../patterns/string/count_binary_substrings_0696.py)
+(one-liner alt: run lengths via groupby, then sum min of neighbouring pairs)
+
+---
+
 ## `datetime` (`date` / `timedelta`)
 
 `date` is a calendar date; `timedelta` is a span you add or subtract. Dates compare

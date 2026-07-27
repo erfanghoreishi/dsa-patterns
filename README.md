@@ -30,14 +30,19 @@ importable Python module.
 | 0300 | Longest Increasing Subsequence   | dynamic-programming |
 | 0322 | Coin Change                      | dynamic-programming |
 | 0338 | Counting Bits                    | dynamic-programming |
+| 0344 | Reverse String                   | two-pointers       |
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
 | 0746 | Min Cost Climbing Stairs         | dynamic-programming |
+| 0696 | Count Binary Substrings          | string             |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
+| 0496 | Next Greater Element I           | stack              |
 | 0482 | License Key Formatting           | string             |
 | 1071 | Greatest Common Divisor of Strings | string           |
+| 0146 | LRU Cache                        | design             |
 | 1108 | Defanging an IP Address          | string             |
+| 1200 | Minimum Absolute Difference      | array              |
 | 1436 | Destination City                 | hashmap            |
 | 1442 | Count Triplets That Can Form Two Arrays of Equal XOR | bit-manipulation |
 | 1480 | Running Sum of 1d Array          | array              |
@@ -76,6 +81,7 @@ importable Python module.
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 2951 | Find the Peaks                   | array              |
+| 3633 | Earliest Finish Time for Land and Water Rides I | array   |
 | 3637 | Trionic Array I                  | array              |
 | 3668 | Restore Finishing Order          | hashmap            |
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
