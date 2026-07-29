@@ -15,7 +15,7 @@
 | 0804 | Unique Morse Code Words | hashmap | ⚠️ Redo | 2026-06-30 | practice nested inline for (set comprehension + inner generator) |
 | 0062 | Unique Paths | dynamic-programming | ⚠️ Redo | 2026-06-30 | O(m*n) DP works; find a more efficient solution (1D DP, or C(m+n-2, m-1)) |
 | 0146 | LRU Cache | design | ⚠️ Redo | 2026-07-19 | works via stamp-scan; rewrite with O(1) eviction — hashmap + doubly linked list (move accessed node to one end, LRU is the other end) |
-| 0496 | Next Greater Element I | stack | ⚠️ Redo | 2026-07-19 | O(n1*n2) works; find the O(n1+n2) monotonic-stack solution (map value -> next greater in one pass over nums2) |
+| 0496 | Next Greater Element I | stack | ✅ Done | 2026-07-19 | solved O(n1+n2) with a monotonic stack (concept 9) |
 
 Status key:
 

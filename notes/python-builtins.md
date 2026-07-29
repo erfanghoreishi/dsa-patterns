@@ -193,6 +193,21 @@ Used in: [capitalize_title_2129.py](../patterns/string/capitalize_title_2129.py)
 
 ---
 
+## `divmod`
+
+`divmod(a, b)` returns `(a // b, a % b)` in one call — the quotient and remainder
+together. The classic use is splitting a flat index into `(row, col)` on a grid of
+width `cols`.
+
+```python
+divmod(17, 5)              # (3, 2)
+row, col = divmod(idx, cols)   # flat index -> 2D coordinates
+```
+
+Used in: _(see notes/tricks.md — 1D ↔ 2D index mapping)_
+
+---
+
 ## `ord` / `chr`
 
 `ord(c)` → code point (int); `chr(n)` → char. `ord(c) - ord('a')` maps `'a'..'z'`

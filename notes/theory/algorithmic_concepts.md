@@ -156,4 +156,61 @@ width.
 
 **Referenced in:** [log_system_0635.py](../../patterns/design/log_system_0635.py)
 — compares timestamp prefixes by granularity, no int conversion.
+
+---
+
+## 9. Monotonic stack (next greater / smaller element)
+
+Keep a stack whose values stay ordered (here **decreasing**). Scan the array; while
+the incoming value breaks the order — bigger than the top — the incoming value is
+the **next greater** for that top, so pop and resolve it. Then push the incoming
+value. Each element is pushed and popped at most once → **O(n)** total.
+
+```python
+# next_greater_element_0496.py  (LC 496)
+next_greater = {}
+stack = []
+for num in nums2:
+    while stack and stack[-1] < num:   # num resolves everything smaller on top
+        next_greater[stack.pop()] = num
+    stack.append(num)
+```
+
+Variations: flip the comparison for **next smaller**; iterate **right-to-left** for
+*previous* greater/smaller. Common in "next warmer day", histogram largest-rectangle,
+stock-span problems.
+
+**Referenced in:** [next_greater_element_0496.py](../../patterns/stack/next_greater_element_0496.py)
+
+---
+
+## 10. BFS for shortest path in an unweighted graph
+
+Explore level by level from the start with a **queue** (`collections.deque`),
+marking nodes **visited when you enqueue** them (not when you dequeue — that avoids
+adding the same node twice). Because every edge has the same cost, the first time
+BFS reaches a node it's via a shortest path, so the move count on dequeue is optimal.
+
+```python
+from collections import deque
+visited = {start}
+q = deque([(start, 0)])          # (node, distance)
+while q:
+    node, dist = q.popleft()
+    if node == target:
+        return dist
+    for nxt in neighbours(node):
+        if nxt not in visited:
+            visited.add(nxt)
+            q.append((nxt, dist + 1))
+return -1                         # unreachable
+```
+
+The whole trick is defining `neighbours` per problem (grid cells, board squares,
+word transformations, states). Use plain **DFS/stack** when you only need
+reachability, not the *shortest* path.
+
+**Referenced in:** [snakes_and_ladders_0909.py](../../patterns/graph/snakes_and_ladders_0909.py)
+— nodes are board squares; `neighbours` = the next 1..6 squares, redirected through
+any snake/ladder.
    

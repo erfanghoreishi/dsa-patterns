@@ -58,6 +58,7 @@ importable Python module.
 | 0806 | Number of Lines To Write String  | string             |
 | 0929 | Unique Email Addresses           | hashmap            |
 | 0883 | Projection Area of 3D Shapes     | matrix             |
+| 0909 | Snakes and Ladders               | graph              |
 | 0938 | Range Sum of BST                 | tree               |
 | 0942 | DI String Match                  | greedy             |
 | 1338 | Reduce Array Size to The Half    | hashmap            |

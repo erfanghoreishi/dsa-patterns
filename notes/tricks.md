@@ -319,6 +319,33 @@ From: [unique_morse_representations_0804.py](../patterns/hashmap/unique_morse_re
 
 ---
 
+## 1D ↔ 2D index mapping (with the boustrophedon variant)
+
+Flattening a grid into a single index (and back) is one line each — `divmod` gives
+both parts of the round trip. Reused constantly: encoding grid states, union-find on
+a grid, walking a board by square number.
+
+```python
+row, col = divmod(idx, cols)   # flat index  -> (row, col)
+idx = row * cols + col         # (row, col)  -> flat index
+```
+
+**Boustrophedon (snake / zig-zag) variant** — when rows alternate direction (like a
+Snakes & Ladders board numbered from the bottom, left-to-right then right-to-left),
+compute the row normally, then flip the column on odd rows:
+
+```python
+# snakes_and_ladders_0909.py  (LC 909) — square number (1-indexed) -> board cell
+idx = cell - 1
+level = idx // cols                 # row counted from the bottom
+row = n - 1 - level                 # actual row index (row 0 is the top)
+col = idx % cols if level % 2 == 0 else cols - 1 - idx % cols   # flip on odd rows
+```
+
+From: [snakes_and_ladders_0909.py](../patterns/graph/snakes_and_ladders_0909.py)
+
+---
+
 ## Direction vectors to visit grid neighbours (no repeated ifs)
 
 List the neighbour offsets once, then loop over them — instead of writing eight
