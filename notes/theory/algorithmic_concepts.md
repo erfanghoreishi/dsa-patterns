@@ -210,6 +210,23 @@ The whole trick is defining `neighbours` per problem (grid cells, board squares,
 word transformations, states). Use plain **DFS/stack** when you only need
 reachability, not the *shortest* path.
 
+### The graph is usually *implicit*
+
+No adjacency list: nodes are plain values and `neighbours()` computes edges from
+arithmetic. Trigger: *"minimum moves/steps between discrete states"* → BFS.
+
+Snakes & Ladders, 3x3 board, ladder at square 2 -> 7:
+
+```
+  7  8  9      neighbours(1) = {3,4,5,6,7}   # roll 1 -> 2 ==ladder==> 7
+  6  5  4      neighbours(7) = {8,9}         # fewer than 6 near the end
+  1  2  3      1 -> 7 -> 9  =  2 moves
+```
+
+Gotchas: **at most** 6 children (two rolls can land on the same node); `-1` does
+**not** mean "no edge" — every in-bounds roll is an edge, a non-`-1` value only
+redirects where it lands.
+
 **Referenced in:** [snakes_and_ladders_0909.py](../../patterns/graph/snakes_and_ladders_0909.py)
 — nodes are board squares; `neighbours` = the next 1..6 squares, redirected through
 any snake/ladder.

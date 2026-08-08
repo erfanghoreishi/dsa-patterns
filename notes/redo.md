@@ -16,6 +16,8 @@
 | 0062 | Unique Paths | dynamic-programming | ⚠️ Redo | 2026-06-30 | O(m*n) DP works; find a more efficient solution (1D DP, or C(m+n-2, m-1)) |
 | 0146 | LRU Cache | design | ⚠️ Redo | 2026-07-19 | works via stamp-scan; rewrite with O(1) eviction — hashmap + doubly linked list (move accessed node to one end, LRU is the other end) |
 | 0496 | Next Greater Element I | stack | ✅ Done | 2026-07-19 | solved O(n1+n2) with a monotonic stack (concept 9) |
+| 0017 | Letter Combinations of a Phone Number | backtracking | ✅ Done | 2026-07-19 | solved by hand with backtracking (product version kept as a comment). Ladder: 78 Subsets ✅ → 77 Combinations → 46 Permutations |
+| 0078 | Subsets | backtracking | ⚠️ Redo | 2026-07-19 | include/exclude recursion tree — the base backtracking template; remember current[:] copies (appending current itself stores a reference the pops mutate) |
 
 Status key:
 

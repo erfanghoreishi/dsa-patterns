@@ -103,6 +103,30 @@ Used in: [running_sum_1480.py](../patterns/array/running_sum_1480.py),
 
 ---
 
+## `itertools.product` / `permutations`
+
+`product(a, b, ...)` = cartesian product — **one item from each** iterable, every
+combination (nested loops, flattened). `product(xs, repeat=n)` is the same set with
+itself `n` times: all length-`n` strings over an alphabet, **with** repeats.
+
+`permutations(xs, r)` instead picks `r` items from **one** pool with **no** repeats,
+order mattering.
+
+```python
+from itertools import product, permutations
+[''.join(p) for p in product('ad', 'xy')]      # ['ax','ay','dx','dy']  — one from each
+[''.join(p) for p in product('ab', repeat=2)]  # ['aa','ab','ba','bb']  — repeats allowed
+[''.join(p) for p in permutations('abc', 2)]   # ['ab','ac','ba','bc','ca','cb'] — no repeats
+```
+
+`product(*groups)` unpacks a list of pools — handy when the number of pools is only
+known at runtime.
+
+Used in: [letter_combinations_0017.py](../patterns/backtracking/letter_combinations_0017.py)
+(`product(*letter_groups)` — one letter from each digit's group)
+
+---
+
 ## `itertools.zip_longest`
 
 Like `zip`, but runs until the **longest** iterable is exhausted, padding the

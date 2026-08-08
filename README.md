@@ -20,11 +20,16 @@ importable Python module.
 | #    | Problem                          | Pattern            |
 |------|----------------------------------|--------------------|
 | 0003 | Longest Substring Without Repeating Characters | sliding-window |
+| 0017 | Letter Combinations of a Phone Number | backtracking   |
 | 0021 | Merge Two Sorted Lists           | linked-list        |
 | 0053 | Maximum Subarray                 | dynamic-programming |
 | 0062 | Unique Paths                     | dynamic-programming |
 | 0070 | Climbing Stairs                  | dynamic-programming |
+| 0078 | Subsets                          | backtracking       |
+| 0100 | Same Tree                        | tree               |
+| 0104 | Maximum Depth of Binary Tree     | tree               |
 | 0119 | Pascal's Triangle II             | dynamic-programming |
+| 0120 | Triangle                         | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
 | 0198 | House Robber                     | dynamic-programming |
 | 0300 | Longest Increasing Subsequence   | dynamic-programming |
@@ -34,7 +39,9 @@ importable Python module.
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
 | 0746 | Min Cost Climbing Stairs         | dynamic-programming |
+| 0661 | Image Smoother                   | matrix             |
 | 0696 | Count Binary Substrings          | string             |
+| 0704 | Binary Search                    | binary-search      |
 | 0763 | Partition Labels                 | greedy             |
 | 0409 | Longest Palindrome               | hashmap            |
 | 0496 | Next Greater Element I           | stack              |
