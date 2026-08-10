@@ -76,16 +76,27 @@ Used in: [maximum_score_1753.py](../patterns/heap/maximum_score_1753.py)
 
 ## `bisect`
 
-Binary search on a sorted list. `bisect_right(list, x)` returns the index where
-`x` would be inserted to keep the list sorted — which tells you how many elements
-are ≤ x. (`bisect_left` gives the count of elements strictly < x.)
+Binary search for an **insertion point** in a sorted list, O(log n). Both return the
+first index satisfying a condition; they differ only on ties:
+
+- `bisect_left(a, x)`  → first index with `a[i] >= x` — **before** any equal values
+- `bisect_right(a, x)` → first index with `a[i] > x`  — **after** all equal values
 
 ```python
-from bisect import bisect_right
-bisect_right([1, 3, 5, 7], 5)  # 3 — index after the 5
+from bisect import bisect_left, bisect_right, insort
+a = [1, 3, 3, 3, 5]
+bisect_left(a, 3)                  # 1  — count of elements <  3
+bisect_right(a, 3)                 # 4  — count of elements <= 3
+bisect_right(a, 3) - bisect_left(a, 3)   # 3 — count of elements == 3
+insort(a, 4)                       # insert, keeping the list sorted
 ```
 
-Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py)
+With no ties the two agree (`bisect_left(a, 4) == bisect_right(a, 4) == 4`). See
+[algorithmic_concepts.md](theory/algorithmic_concepts.md) (11.) for the hand-rolled
+template and why `>=` vs `>` moves the boundary.
+
+Used in: [longest_subsequence_limited_sum_2389.py](../patterns/binary-search/longest_subsequence_limited_sum_2389.py),
+[maximum_count_2529.py](../patterns/binary-search/maximum_count_2529.py) (written by hand)
 
 ---
 

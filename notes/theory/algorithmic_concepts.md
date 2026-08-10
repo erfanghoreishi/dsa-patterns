@@ -230,4 +230,43 @@ redirects where it lands.
 **Referenced in:** [snakes_and_ladders_0909.py](../../patterns/graph/snakes_and_ladders_0909.py)
 — nodes are board squares; `neighbours` = the next 1..6 squares, redirected through
 any snake/ladder.
+
+---
+
+## 11. Binary search: boundary template (`bisect_left` vs `bisect_right`)
+
+Both find the **first index satisfying a condition** — same template, only the
+comparison operator differs.
+
+```python
+l, r = 0, len(nums)            # half-open [l, r)
+while l < r:
+    mid = (l + r) // 2
+    if condition(nums[mid]):   # true -> mid may be the answer, keep it
+        r = mid
+    else:                      # false -> mid is ruled out
+        l = mid + 1
+return l                       # first index where condition holds (== len if none)
+```
+
+- `bisect_left`  → `condition = nums[mid] >= target` — first pos where value **>=** target
+- `bisect_right` → `condition = nums[mid] >  target` — first pos where value **>** target
+  (skips past all values `== target`, landing just after them)
+
+**Why `>=` vs `>` changes the result:** when `nums[mid] == target`, `>=` is *true*, so
+`r = mid` pulls the boundary **before** the equal block (leftmost). Strict `>` is
+*false*, so `l = mid + 1` pushes **past** the equal block (just after the last equal).
+
+```
+[1, 3, 3, 3, 5]   bisect_left(3) = 1     bisect_right(3) = 4
+                  count < 3 = 1,  count <= 3 = 4,  count == 3 = right - left = 3
+```
+
+**Exact search is a different shape:** `l, r = 0, len-1` with `while l <= r`, returning
+`mid` on a hit and `-1` if the loop ends — it needs a found-check; the boundary form
+above never does.
+
+**Referenced in:** [maximum_count_2529.py](../../patterns/binary-search/maximum_count_2529.py)
+(hand-rolled `bisect_left`) and [search_0704.py](../../patterns/binary-search/search_0704.py)
+(the `l <= r` exact-search form).
    

@@ -18,6 +18,7 @@
 | 0496 | Next Greater Element I | stack | ✅ Done | 2026-07-19 | solved O(n1+n2) with a monotonic stack (concept 9) |
 | 0017 | Letter Combinations of a Phone Number | backtracking | ✅ Done | 2026-07-19 | solved by hand with backtracking (product version kept as a comment). Ladder: 78 Subsets ✅ → 77 Combinations → 46 Permutations |
 | 0078 | Subsets | backtracking | ⚠️ Redo | 2026-07-19 | include/exclude recursion tree — the base backtracking template; remember current[:] copies (appending current itself stores a reference the pops mutate) |
+| 2529 | Maximum Count of Positive Integer and Negative Integer | binary-search | ⚠️ Redo | 2026-07-19 | hand-rolled bisect_left. TODO: write up bisect_left vs bisect_right and the boundary conditions in notes — `l < r` + `r = len` (lower bound, insertion point) vs `l <= r` + `r = len-1` (exact search, needs a found check) |
 
 Status key:
 

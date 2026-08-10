@@ -36,6 +36,7 @@ importable Python module.
 | 0322 | Coin Change                      | dynamic-programming |
 | 0338 | Counting Bits                    | dynamic-programming |
 | 0344 | Reverse String                   | two-pointers       |
+| 0226 | Invert Binary Tree               | tree               |
 | 0258 | Add Digits                       | math               |
 | 0290 | Word Pattern                     | hashmap            |
 | 0746 | Min Cost Climbing Stairs         | dynamic-programming |
@@ -47,6 +48,7 @@ importable Python module.
 | 0496 | Next Greater Element I           | stack              |
 | 0482 | License Key Formatting           | string             |
 | 1071 | Greatest Common Divisor of Strings | string           |
+| 0145 | Binary Tree Postorder Traversal  | tree               |
 | 0146 | LRU Cache                        | design             |
 | 1108 | Defanging an IP Address          | string             |
 | 1200 | Minimum Absolute Difference      | array              |
@@ -86,6 +88,7 @@ importable Python module.
 | 2357 | Make Array Zero by Subtracting Equal Amounts | heap       |
 | 2389 | Longest Subsequence With Limited Sum | binary-search  |
 | 2502 *SIG | Design Memory Allocator      | design             |
+| 2529 | Maximum Count of Positive Integer and Negative Integer | binary-search |
 | 2586 | Count the Number of Vowel Strings in Range | string   |
 | 2596 | Check Knight Tour Configuration  | matrix             |
 | 2951 | Find the Peaks                   | array              |
