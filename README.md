@@ -27,7 +27,9 @@ importable Python module.
 | 0070 | Climbing Stairs                  | dynamic-programming |
 | 0078 | Subsets                          | backtracking       |
 | 0100 | Same Tree                        | tree               |
+| 0101 | Symmetric Tree                   | tree               |
 | 0104 | Maximum Depth of Binary Tree     | tree               |
+| 0110 | Balanced Binary Tree             | tree               |
 | 0119 | Pascal's Triangle II             | dynamic-programming |
 | 0120 | Triangle                         | dynamic-programming |
 | 0121 | Best Time to Buy and Sell Stock  | dynamic-programming |
@@ -48,6 +50,7 @@ importable Python module.
 | 0496 | Next Greater Element I           | stack              |
 | 0482 | License Key Formatting           | string             |
 | 1071 | Greatest Common Divisor of Strings | string           |
+| 0141 | Linked List Cycle                | linked-list        |
 | 0145 | Binary Tree Postorder Traversal  | tree               |
 | 0146 | LRU Cache                        | design             |
 | 1108 | Defanging an IP Address          | string             |
@@ -72,6 +75,7 @@ importable Python module.
 | 0942 | DI String Match                  | greedy             |
 | 1338 | Reduce Array Size to The Half    | hashmap            |
 | 0539 | Minimum Time Difference          | array              |
+| 0543 | Diameter of Binary Tree          | tree               |
 | 0635 | Design Log Storage System        | design             |
 | 1512 | Number of Good Pairs             | hashmap            |
 | 1518 | Water Bottles                    | math               |

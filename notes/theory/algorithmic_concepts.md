@@ -269,4 +269,32 @@ above never does.
 **Referenced in:** [maximum_count_2529.py](../../patterns/binary-search/maximum_count_2529.py)
 (hand-rolled `bisect_left`) and [search_0704.py](../../patterns/binary-search/search_0704.py)
 (the `l <= r` exact-search form).
+
+---
+
+## 12. Floyd's cycle detection (fast & slow pointers)
+
+Move `slow` 1 step and `fast` 2 steps. Inside a cycle the gap closes by 1 per step,
+so they **must** meet; with no cycle `fast` runs off the end. O(1) space — no
+visited set.
+
+```python
+slow = fast = head
+while fast and fast.next:      # fast.next guards fast.next.next
+    slow, fast = slow.next, fast.next.next
+    if slow == fast:
+        return True            # cycle
+return False
+```
+
+Two variations worth knowing (both verified):
+- **Middle of a list** — drop the meet-check; when `fast` runs out, `slow` is at the
+  middle (second middle on even length).
+- **Cycle *entrance*** — after they meet, reset one pointer to `head` and advance
+  **both** by 1; they meet at the start of the cycle (LC 142).
+
+Also applies to any "next" function, not just linked lists — e.g. treating
+`i -> nums[i]` as edges turns duplicate-finding into cycle-finding (LC 287).
+
+**Referenced in:** [has_cycle_0141.py](../../patterns/linked-list/has_cycle_0141.py)
    

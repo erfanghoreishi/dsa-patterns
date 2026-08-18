@@ -19,6 +19,12 @@
 | 0017 | Letter Combinations of a Phone Number | backtracking | ✅ Done | 2026-07-19 | solved by hand with backtracking (product version kept as a comment). Ladder: 78 Subsets ✅ → 77 Combinations → 46 Permutations |
 | 0078 | Subsets | backtracking | ⚠️ Redo | 2026-07-19 | include/exclude recursion tree — the base backtracking template; remember current[:] copies (appending current itself stores a reference the pops mutate) |
 | 2529 | Maximum Count of Positive Integer and Negative Integer | binary-search | ⚠️ Redo | 2026-07-19 | hand-rolled bisect_left. TODO: write up bisect_left vs bisect_right and the boundary conditions in notes — `l < r` + `r = len` (lower bound, insertion point) vs `l <= r` + `r = len-1` (exact search, needs a found check) |
+| 0101 | Symmetric Tree | tree | ⚠️ Redo | 2026-07-19 | mirror recursion: pair CROSSED (left.left vs right.right, left.right vs right.left) — contrast with 100 Same Tree, which pairs same-side |
+| 0110 | Balanced Binary Tree | tree | ⚠️ Redo | 2026-07-19 | current solution is O(n^2) — height() is recomputed at every node. Come up with the O(n) version: one DFS that returns the height AND signals imbalance (e.g. return -1 as a sentinel, short-circuiting upward) so each node is visited once |
+| 0876 | Middle of the Linked List | linked-list | 📌 TODO | 2026-07-19 | fast & slow (concept 12) — drop the meet-check; when fast runs out, slow is the middle |
+| 0142 | Linked List Cycle II | linked-list | 📌 TODO | 2026-07-19 | fast & slow (concept 12) — after they meet, reset one pointer to head and advance both by 1 to find the cycle entrance |
+| 0234 | Palindrome Linked List | linked-list | 📌 TODO | 2026-07-19 | find middle with fast & slow, reverse the second half, compare |
+| 0287 | Find the Duplicate Number | array | 📌 TODO | 2026-07-19 | Floyd on an implicit graph: treat i -> nums[i] as edges, the duplicate is the cycle entrance |
 
 Status key:
 

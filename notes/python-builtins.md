@@ -222,6 +222,32 @@ Used in: [number_of_lines_0806.py](../patterns/string/number_of_lines_0806.py)
 
 ---
 
+## `nonlocal`
+
+Lets a nested function **reassign** a variable from its enclosing function's local
+scope — one level "out", not the whole module (that's `global`). Without it, an
+assignment inside the inner function just creates a new local and the outer variable
+never changes. Reading needs no declaration; only rebinding does.
+
+```python
+def outer():
+    total = 0
+    def add(x):
+        nonlocal total     # without this, `total = ...` would make a NEW local
+        total += x
+    add(3); add(4)
+    return total           # 7
+```
+
+Common in recursion that must return one value while accumulating another (a
+mutable `result = []` and `.append()` avoids needing it, since that's mutation, not
+rebinding).
+
+Used in: [diameter_of_binary_tree_0543.py](../patterns/tree/diameter_of_binary_tree_0543.py)
+(`height()` returns the height while tracking the max diameter)
+
+---
+
 ## `:=` (walrus / assignment expression)
 
 Assigns **and** returns a value inside an expression, so you can read and test in
