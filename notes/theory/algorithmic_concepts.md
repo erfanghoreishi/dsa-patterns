@@ -267,8 +267,10 @@ return l                       # first index where condition holds (== len if no
 above never does.
 
 **Referenced in:** [maximum_count_2529.py](../../patterns/binary-search/maximum_count_2529.py)
-(hand-rolled `bisect_left`) and [search_0704.py](../../patterns/binary-search/search_0704.py)
-(the `l <= r` exact-search form).
+(hand-rolled `bisect_left`), [search_0704.py](../../patterns/binary-search/search_0704.py)
+(the `l <= r` exact-search form), and
+[time_map_0981.py](../../patterns/design/time_map_0981.py)
+(predecessor search: rightmost value `<=` target, by carrying a candidate).
 
 ---
 
@@ -297,4 +299,24 @@ Also applies to any "next" function, not just linked lists — e.g. treating
 `i -> nums[i]` as edges turns duplicate-finding into cycle-finding (LC 287).
 
 **Referenced in:** [has_cycle_0141.py](../../patterns/linked-list/has_cycle_0141.py)
+
+## 13. Two-pointer scan with one branch at the first mismatch
+
+Walk from both ends while the ends agree. At the **first** divergence, don't restart
+the search — branch into the small fixed set of repairs and test each one.
+
+```python
+while l < r:
+    if s[l] != s[r]:
+        return is_pal(l + 1, r) or is_pal(l, r - 1)   # delete left or right
+    l += 1
+    r -= 1
+return True
+```
+
+Why the first mismatch is enough: every pair already matched is fine as-is, so the
+one allowed edit must involve `l` or `r` — two candidates, not `n`. Each branch is a
+plain O(n) scan, so the whole thing stays O(n) instead of O(n²).
+
+**Referenced in:** [valid_palindrome_ii_0680.py](../../patterns/two-pointers/valid_palindrome_ii_0680.py)
    

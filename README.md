@@ -102,6 +102,11 @@ importable Python module.
 | 3823 | Reverse Letters Then Special Characters | two-pointers |
 | 3754 | Concatenate Non-Zero Digits and Multiply by Sum I | math |
 | 3884 | First Matching Character From Both Ends | two-pointers |
+| 0680 | Valid Palindrome II              | two-pointers       |
+| 0252 | Meeting Rooms                    | intervals          |
+| 0572 | Subtree of Another Tree          | tree               |
+| 0981 | Time Based Key-Value Store       | design             |
+| 0355 | Design Twitter                   | design             |
 | *SIG  | Swap Adjacent Character Pairs    | string             |
 | CF 7B | Memory Manager                 | design             |
 | Quera | Polynomial Evaluation (Horner) | dynamic-programming – math |

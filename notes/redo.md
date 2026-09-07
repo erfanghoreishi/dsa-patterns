@@ -25,6 +25,7 @@
 | 0142 | Linked List Cycle II | linked-list | 📌 TODO | 2026-07-19 | fast & slow (concept 12) — after they meet, reset one pointer to head and advance both by 1 to find the cycle entrance |
 | 0234 | Palindrome Linked List | linked-list | 📌 TODO | 2026-07-19 | find middle with fast & slow, reverse the second half, compare |
 | 0287 | Find the Duplicate Number | array | 📌 TODO | 2026-07-19 | Floyd on an implicit graph: treat i -> nums[i] as edges, the duplicate is the cycle entrance |
+| 0355 | Design Twitter | design | ⚠️ Redo | 2026-09-07 | Next-level solution: k-way merge with a heap for this problem |
 
 Status key:
 
